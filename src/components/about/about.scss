@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header {
+  margin-bottom: 10%;
+}
+
+.text-wrapper {
+  text-align: left;
+  padding: 3em;
+  margin: auto 0;
+}
+
+.colored-section {
+  background-color: #00adb5;
+  color: #eee;
+  /* padding: 0 20px; */
+}

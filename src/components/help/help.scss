@@ -1,0 +1,14 @@
+.help {
+  height: 100vh;
+
+  .questions-container {
+    div {
+      background-color: #00adb5;
+      color: #eee;
+
+      .answer {
+        padding-block: 0.5em;
+      }
+    }
+  }
+}
