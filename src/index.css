@@ -20,6 +20,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   margin: 0 auto;
   text-align: center;
@@ -30,28 +34,14 @@ body {
   height: 19.0625rem;
 }
 
-footer {
-  background-color: #222831;
-  color: #eee;
-  font-size: 1.3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-  
-}
-
-footer a {
-  color: inherit;
-  text-decoration: none;
-  padding: 0.2rem 1rem;
-}
 /* login */
-.login-container{
-  height: 90vh;
-  padding: 10% 0;
-  box-shadow: 0 0 10px 10px #bfb9b9; 
+.login {
+  height: 100vh;
+}
+.login-container {
+  /* height: 90vh; */
+  padding: 7% 0;
+  box-shadow: 0 0 10px 10px #bfb9b9;
   margin: 3%;
   border-radius: 5%;
 }

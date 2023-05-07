@@ -25,10 +25,6 @@ const Navbar = () => {
     setShowNavbar(!showNavbar);
   };
 
-  // const setPath = path => {
-  //   return isAuth ? path : '/login';
-  // };
-
   return (
     <nav className='navbar nav'>
       <div className='nav-container'>
@@ -45,10 +41,18 @@ const Navbar = () => {
               <NavLink to='/'>Home</NavLink>
             </li>
             <li>
-              <NavLink to='/time'>Time</NavLink>
+              {isAuth ? (
+                <NavLink to='/scheduled'>Scheduled</NavLink>
+              ) : (
+                <Link to='/login'>Scheduled</Link>
+              )}
             </li>
             <li>
-              <NavLink to='/emergency'>Emergency</NavLink>
+              {isAuth ? (
+                <NavLink to='/emergency'>Emergency</NavLink>
+              ) : (
+                <Link to='/login'>Emergency</Link>
+              )}
             </li>
             <li>
               <NavLink to='/about'>About</NavLink>

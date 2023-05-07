@@ -13,12 +13,10 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import {  ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import theme from '../../reusable/Theme/Theme';
-
-
 
 function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -57,12 +55,12 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className='login'>
       {isLoading ? (
         <LoadingSpinner />
       ) : (
         <ThemeProvider theme={theme}>
-          <Container component='main' maxWidth='xs'className='login-container'>
+          <Container component='main' maxWidth='xs' className='login-container'>
             <CssBaseline />
             <Box
               sx={{
@@ -71,7 +69,7 @@ function Login() {
                 alignItems: 'center',
               }}
             >
-              <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+              <Avatar sx={{ m: 2, bgcolor: 'secondary.main' }}>
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component='h1' variant='h5'>
