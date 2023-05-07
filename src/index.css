@@ -49,8 +49,11 @@ footer a {
 }
 /* login */
 .login-container{
-  height: 80vh;
-  padding: 5% 0;
+  height: 90vh;
+  padding: 10% 0;
+  box-shadow: 0 0 10px 10px #bfb9b9; 
+  margin: 3%;
+  border-radius: 5%;
 }
 .preloader {
   overflow: hidden;
