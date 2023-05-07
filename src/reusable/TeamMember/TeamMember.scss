@@ -19,16 +19,19 @@
   }
 
   .member__info {
+    cursor: pointer;
+    transition: 0.2 ease-in;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     text-align: left;
     line-height: 1.5;
+
     h2 {
       margin-bottom: 10px;
       color: #222831;
     }
-    h5 {
+    h4 {
       margin-bottom: 10px;
       color: #302f2f;
     }
@@ -37,9 +40,8 @@
     }
   }
 
-  // &:hover {
-  //   transform: scale(1.01);
-  //   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  //   border: 1px solid #ccc;
-  // }
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
 }

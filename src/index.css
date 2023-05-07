@@ -36,11 +36,10 @@ a {
 
 /* login */
 .login {
-  height: 100vh;
+  height: 80vh;
 }
 .login-container {
-  /* height: 90vh; */
-  padding: 7% 0;
+  padding: 3% 0;
   box-shadow: 0 0 10px 10px #bfb9b9;
   margin: 3%;
   border-radius: 5%;

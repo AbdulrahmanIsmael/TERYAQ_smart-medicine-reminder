@@ -3,6 +3,22 @@
   height: 100vh;
   padding: 2em 0;
 
+  @media (width <= 1300px) {
+    height: 120vh;
+  }
+
+  @media (width <= 990px) {
+    height: 130vh;
+  }
+
+  @media (width <= 768px) {
+    height: 145vh;
+  }
+
+  @media (width <= 400px) {
+    height: 160vh;
+  }
+
   h2 {
     font-size: 5rem;
     color: #222831;
@@ -49,14 +65,22 @@
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 70%);
+    transform: translate(-50%, 50%);
     z-index: 1;
     background-color: #eee;
     color: #222831;
     border-radius: 2em;
     border: 1px solid #666;
-    width: fit-content;
-    padding: 0.5em 2em 1em;
+    width: 45vw;
+    padding: 1.2em 1em 1.2em;
+
+    @media (600px < width <= 1200px) {
+      width: 60vw;
+    }
+
+    @media (width <= 600px) {
+      width: 100vw;
+    }
 
     &.emergency-form--hide {
       transform: translate(-50%, -200%);
@@ -67,7 +91,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 2em;
+      gap: 3em;
 
       legend {
         width: 100%;
@@ -83,23 +107,31 @@
       }
 
       .emergency-form-inputs {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 3em;
+        gap: 3.4em;
 
         div {
           display: flex;
-          gap: 0.8em;
+          justify-content: space-evenly;
+
+          @media (width < 990px) {
+            flex-direction: column;
+            gap: 0.5em;
+          }
 
           label {
             font-size: 1.6rem;
           }
 
           input {
+            transition: 0.2s ease;
             padding-left: 0.3em;
+            padding-block: 0.4em;
             border-radius: 0.5em;
             border: 1px solid #222831;
-            font-size: 1.2rem;
+            font-size: 1.12rem;
             color: #393e46;
             caret-color: #222831;
 
@@ -109,6 +141,7 @@
 
             &:focus {
               outline: none;
+              border-bottom: 2px solid #222831;
             }
 
             &#name {
@@ -121,16 +154,138 @@
       .emergency-form-set {
         transition: 0.3s ease-in-out;
         cursor: pointer;
-        background-color: #393e46;
+        background-color: #222831;
         color: #eee;
-        border: 0;
+        border: 1px solid #222831;
         font-size: 1.3rem;
         border-radius: 0.6em;
         padding: 0.3em 1em;
 
+        &:is(:active, :hover) {
+          background-color: #eee;
+          color: #222831;
+        }
+
         &:active {
           transform: scale(0.97);
         }
+      }
+    }
+  }
+
+  .emergency-details {
+    position: relative;
+    border: 2px solid #222831;
+    border-radius: 1.2em;
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 2em 0.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    overflow: hidden;
+
+    @media (width <= 768px) {
+      width: 70vw;
+    }
+
+    @media (width <= 600px) {
+      width: 90vw;
+    }
+
+    &:hover {
+      h2 {
+        color: #eee;
+        z-index: 1;
+      }
+
+      h3 {
+        color: #eee;
+        z-index: 1;
+      }
+
+      p {
+        color: #eee;
+        z-index: 1;
+      }
+
+      &::before {
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+
+      &::after {
+        transform: translate(50%, 0);
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+
+    &::before {
+      content: '';
+      transition: 0.5s cubic-bezier(0.6, 0, 0.2, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      background-color: #222831;
+    }
+
+    &::after {
+      content: '';
+      transition: 0.5s cubic-bezier(0.6, 0, 0.2, 0);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(50%, 50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      background-color: #222831;
+    }
+
+    h2 {
+      font-size: 4rem;
+      transition: 0.5s ease-out;
+      margin-bottom: 1em;
+
+      @media (width <= 400px) {
+        font-size: 3rem;
+      }
+    }
+
+    .emergency-name {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    .emergency-phone {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
       }
     }
   }

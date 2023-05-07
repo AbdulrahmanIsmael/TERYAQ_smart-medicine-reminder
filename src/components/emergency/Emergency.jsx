@@ -98,7 +98,7 @@ function Emergency() {
           </legend>
           <div className='emergency-form-inputs'>
             <div>
-              <label htmlFor='name'>Emergency Contact Name</label>
+              <label htmlFor='name'>Emergency Name</label>
               <input
                 type='text'
                 name='name'
@@ -109,7 +109,7 @@ function Emergency() {
               />
             </div>
             <div>
-              <label htmlFor='phone'>Emergency Contact Phone</label>
+              <label htmlFor='phone'>Emergency Phone</label>
               <input
                 type='tel'
                 name='phone'
@@ -124,6 +124,19 @@ function Emergency() {
             Set Emergency Contact
           </button>
         </form>
+      </div>
+
+      <div className='emergency-details'>
+        <h2>Emergency Details</h2>
+
+        <div className='emergency-name'>
+          <h3>Name</h3>
+          <p>Abdulrahman Mohammed</p>
+        </div>
+        <div className='emergency-phone'>
+          <h3>Phone</h3>
+          <p>01558808463</p>
+        </div>
       </div>
 
       <div className={showForm ? 'overlay' : 'overlay overlay--hide'}></div>

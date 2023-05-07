@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import './home.scss';
-import imgUrl from '../../assets/background.jpg';
+import deviceImg1 from '../../assets/device1.jpg';
+import deviceImg2 from '../../assets/device3.jpg';
 
 function Home() {
   const typeRef = useRef(null);
@@ -53,11 +54,11 @@ function Home() {
           </p>
         </div>
 
-        <img src={imgUrl} alt='bgImage' />
+        <img src={deviceImg2} alt='bgImage' />
       </div>
 
       <div className='section2'>
-        <img src={imgUrl} alt='bgImage' />
+        <img src={deviceImg1} alt='bgImage' />
 
         <div className='section2-info'>
           <h2>Your Smart Medication Solution</h2>
