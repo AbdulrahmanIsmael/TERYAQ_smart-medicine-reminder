@@ -13,32 +13,12 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {  ThemeProvider } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
+import theme from '../../reusable/Theme/Theme';
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#2e4f4f',
-      light: '#cbe4de',
-    },
-    secondary: {
-      main: '#cbe4de',
-    },
-    background: {
-      paper: '#cbe4de',
-      default: '#0e8388',
-    },
-    text: {
-      primary: '#2c3333',
-    },
-    error: {
-      main: 'rgba(170,37,37,0.8)',
-    },
-  },
-});
+
 
 function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -82,11 +62,10 @@ function Login() {
         <LoadingSpinner />
       ) : (
         <ThemeProvider theme={theme}>
-          <Container component='main' maxWidth='xs'>
+          <Container component='main' maxWidth='xs'className='login-container'>
             <CssBaseline />
             <Box
               sx={{
-                marginTop: 8,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',

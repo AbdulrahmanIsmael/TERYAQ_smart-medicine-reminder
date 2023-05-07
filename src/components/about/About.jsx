@@ -81,6 +81,8 @@ export default function About() {
         md={6}
         marginTop={{ md: 5, xs: 5 }}
         alignItems='center'
+        sx={{display:{xs:"none",md:"block"}}}
+
       >
         <img
           src='https://static4.salsajeans.com/images/block1_4476.jpg?1619021489'
@@ -125,6 +127,19 @@ export default function About() {
             correct scheduled medicine when Alarm goes ON.{' '}
           </Typography>
         </div>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        marginTop={{ md: 5, xs: 5 }}
+        alignItems='center'
+        sx={{display:{xs:"block",md:"none"}}}
+      >
+        <img
+          src='https://static4.salsajeans.com/images/block1_4476.jpg?1619021489'
+          alt=''
+        />
       </Grid>
       <Grid item xs={12} md={6} marginTop={5} className='colored-section'>
         <div className='text-wrapper'>

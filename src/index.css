@@ -34,12 +34,12 @@ footer {
   background-color: #222831;
   color: #eee;
   font-size: 1.3rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
+  
 }
 
 footer a {
@@ -47,7 +47,11 @@ footer a {
   text-decoration: none;
   padding: 0.2rem 1rem;
 }
-
+/* login */
+.login-container{
+  height: 80vh;
+  padding: 5% 0;
+}
 .preloader {
   overflow: hidden;
   position: absolute;
