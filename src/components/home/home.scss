@@ -190,6 +190,10 @@
         &:focus {
           outline: 0;
         }
+
+        @media (width <= 600px) {
+          font-size: 1rem;
+        }
       }
     }
   }
