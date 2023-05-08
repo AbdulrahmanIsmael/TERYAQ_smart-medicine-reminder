@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import './time.scss';
 import { database } from '../../firebase/firebase';
 import { ref, set } from 'firebase/database';
+import './time.scss';
 
 function Time() {
   const [slotName, setSlotName] = useState('SLOT 1');
@@ -111,6 +111,7 @@ function Time() {
 
         <fieldset className='time'>
           <legend>HH:MM</legend>
+
           <div>
             <input
               className='time-input'
