@@ -159,6 +159,14 @@ export default function About() {
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         />
       </Grid>
+      <Grid item xs={12}>
+        <TeamMember
+          name='Islam AbouElmagd'
+          image={profileImage}
+          position='Ai Developer'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        />
+      </Grid>
     </Grid>
   );
 }

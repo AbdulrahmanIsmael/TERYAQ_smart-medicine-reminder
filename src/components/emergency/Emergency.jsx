@@ -23,7 +23,7 @@ function Emergency() {
     const phoneRef = ref(database, 'phone');
 
     set(phoneRef, Number(phone))
-      .then(() => console.log('Phone Is Sent Successfully'))
+      .then(() => console.log('Process Is Done'))
       .catch(error => console.log(error));
   };
 

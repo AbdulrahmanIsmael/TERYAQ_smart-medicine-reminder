@@ -44,16 +44,14 @@ const Navbar = () => {
               {isAuth ? (
                 <NavLink to='/scheduled'>Scheduled</NavLink>
               ) : (
-                // Temporary => will be changing later to the login path | NavLink => Link
-                <NavLink to='/scheduled'>Scheduled</NavLink>
+                <Link to='/login'>Scheduled</Link>
               )}
             </li>
             <li>
               {isAuth ? (
                 <NavLink to='/emergency'>Emergency</NavLink>
               ) : (
-                // Temporary => will be changing later to the login path
-                <NavLink to='/emergency'>Emergency</NavLink>
+                <Link to='/login'>Emergency</Link>
               )}
             </li>
             <li>
