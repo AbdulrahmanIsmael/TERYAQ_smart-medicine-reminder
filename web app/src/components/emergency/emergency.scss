@@ -33,7 +33,7 @@
     .emergency-move {
       display: flex;
       gap: 100px;
-      animation: moving-bar linear 25s infinite;
+      animation: moving-bar linear 30s infinite;
 
       p {
         font-size: 1.8rem;
@@ -180,7 +180,7 @@
     width: 40vw;
     margin: 0 auto;
     margin-top: 2em;
-    padding: 2em 0.4em;
+    padding: 2em 3em;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -261,31 +261,41 @@
       }
     }
 
-    .emergency-name {
+    .personal-details {
       display: flex;
-      justify-content: space-evenly;
-      align-items: baseline;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
 
-      h3 {
-        font-size: 2rem;
+      .emergency-name {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
       }
 
-      p {
-        font-size: 1.6rem;
-      }
-    }
+      .emergency-phone {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    .emergency-phone {
-      display: flex;
-      justify-content: space-around;
-      align-items: baseline;
+        h3 {
+          font-size: 2rem;
+        }
 
-      h3 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.6rem;
+        p {
+          font-size: 1.6rem;
+        }
       }
     }
   }

@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer>
       <div className='footer-container'>
-        <div className='footer-links'>
+        {/* <div className='footer-links'>
           <a href='/'>
             <FacebookIcon sx={{ fontSize: '2rem' }} />
           </a>
@@ -19,7 +19,7 @@ function Footer() {
           <a href='/'>
             <LinkedInIcon sx={{ fontSize: '2rem' }} />
           </a>
-        </div>
+        </div> */}
         <div className='footer-copyright'>
           <a href='https:engfac.mans.edu.eg/en/mathematics-and-engineering-physics-department-25'>
             ECE{' '}

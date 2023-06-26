@@ -8,7 +8,7 @@ import About from './components/about/About';
 import Help from './components/help/Help';
 import Login from './components/login/Login';
 import Emergency from './components/emergency/Emergency';
-import Time from './components/time/Time';
+import Scheduled from './components/scheduled/Scheduled';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/firebase';
 
@@ -45,7 +45,7 @@ function App() {
               <Route path='/help' element={<Help />} />
               <Route path='/login' element={<Login />} />
               <Route path='/emergency' element={<Emergency />} />
-              <Route path='/scheduled' element={<Time />} />
+              <Route path='/scheduled' element={<Scheduled />} />
             </Routes>
           </div>
         </div>

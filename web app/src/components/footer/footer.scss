@@ -9,30 +9,30 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    .footer-links {
+    // .footer-links {
+    //   padding: 1em;
+    //   background-color: #222831;
+    //   color: #eee;
+    //   display: flex;
+    //   justify-content: center;
+    //   gap: 2em;
+    //   a {
+    //     color: inherit;
+    //     padding: 0.2rem 1rem;
+    //   }
+    // }
+
+    .footer-copyright {
       padding: 1em;
       background-color: #222831;
       color: #eee;
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      a {
-        color: inherit;
-        padding: 0.2rem 1rem;
-      }
-    }
-
-    .footer-copyright {
-      padding: 0.5em;
-      background-color: #eee;
-      color: #222831;
       display: flex;
       justify-content: space-around;
       font-size: 1.5rem;
 
       a {
         font-weight: 600;
-        color: #222831;
+        color: #eee;
       }
     }
   }

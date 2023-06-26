@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './emergency.scss';
 import { database } from '../../firebase/firebase';
-import { ref, set } from 'firebase/database';
+import { ref, set, onValue } from 'firebase/database';
 import CloseIcon from '@mui/icons-material/Close';
 
 const initialInputs = {
@@ -18,10 +18,43 @@ function Emergency() {
   const [inputs, setInputs] = useState(initialInputs);
   const [placeholders, setPlaceholders] = useState(initialPlaceholders);
   const [showForm, setShowForm] = useState(false);
+  const [emerDetails, setEmerDetails] = useState({
+    name: '-',
+    phone: '-',
+  });
 
-  const sendToFirebase = phone => {
+  useEffect(() => {
     const phoneRef = ref(database, 'phone');
+    const nameRef = ref(database, 'name');
 
+    onValue(phoneRef, snapshot => {
+      const phone = snapshot.val();
+
+      setEmerDetails(prevDetails => {
+        return {
+          ...prevDetails,
+          phone: phone,
+        };
+      });
+    });
+
+    onValue(nameRef, snapshot => {
+      const phone = snapshot.val();
+
+      setEmerDetails(prevDetails => {
+        return {
+          ...prevDetails,
+          name: phone,
+        };
+      });
+    });
+  }, [inputs]);
+
+  const sendToFirebase = (phone, name) => {
+    const phoneRef = ref(database, 'phone');
+    const nameRef = ref(database, 'name');
+
+    set(nameRef, name);
     set(phoneRef, Number(phone))
       .then(() => console.log('Process Is Done'))
       .catch(error => console.log(error));
@@ -31,7 +64,7 @@ function Emergency() {
     e.preventDefault();
 
     if (inputs.name && inputs.phone) {
-      sendToFirebase(inputs.phone);
+      sendToFirebase(inputs.phone, inputs.name);
       setShowForm(false);
     } else {
       if (!inputs.name) {
@@ -129,13 +162,15 @@ function Emergency() {
       <div className='emergency-details'>
         <h2>Emergency Details</h2>
 
-        <div className='emergency-name'>
-          <h3>Name</h3>
-          <p>Abdulrahman Mohammed</p>
-        </div>
-        <div className='emergency-phone'>
-          <h3>Phone</h3>
-          <p>01558808463</p>
+        <div className='personal-details'>
+          <div className='emergency-name'>
+            <h3>Name:</h3>
+            <p>{emerDetails.name}</p>
+          </div>
+          <div className='emergency-phone'>
+            <h3>Phone:</h3>
+            <p>{emerDetails.phone}</p>
+          </div>
         </div>
       </div>
 
