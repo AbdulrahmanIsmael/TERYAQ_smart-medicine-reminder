@@ -3,6 +3,9 @@ import TeamMember from '../../reusable/TeamMember/TeamMember';
 import Grid from '@mui/material/Grid';
 import { Container, Divider, Typography } from '@mui/material';
 import profileImage from '../../assets/profile image.png';
+import omarSobhy from '../../assets/omar sobhy.jpg';
+import ahmedHafez from '../../assets/ahmed hafez.jpg';
+import abdulrahmanMohammed from '../../assets/abdulrahman mohammed.jpeg';
 
 export default function About() {
   return (
@@ -130,25 +133,22 @@ export default function About() {
       <Grid item xs={12} md={6}>
         <TeamMember
           name='Omar Sobhy'
-          image={profileImage}
-          position='Lorem ipsum dolor'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          image={omarSobhy}
+          position='Software Engineer - Team Leader'
         />
       </Grid>
       <Grid item xs={12} md={6}>
         <TeamMember
           name='Ahmed Hafez'
-          image={profileImage}
+          image={ahmedHafez}
           position='Lorem ipsum dolor'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         />
       </Grid>
       <Grid item xs={12} md={6}>
         <TeamMember
           name='Abdulrahman Mohammed Ismael'
-          image={profileImage}
+          image={abdulrahmanMohammed}
           position='Web Developer'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         />
       </Grid>
       <Grid item xs={12} md={6}>
@@ -156,15 +156,13 @@ export default function About() {
           name='Mohammed Ashraf'
           image={profileImage}
           position='Web Developer'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         />
       </Grid>
       <Grid item xs={12}>
         <TeamMember
           name='Islam AbouElmagd'
           image={profileImage}
-          position='Ai Developer'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          position='AI Developer'
         />
       </Grid>
     </Grid>

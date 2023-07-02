@@ -8,6 +8,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+import teryaqLogo from '../../assets/teryaq.png';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -29,8 +30,9 @@ const Navbar = () => {
     <nav className='navbar nav'>
       <div className='nav-container'>
         <Link to='/' className='site-title'>
-          <MedicationLiquidIcon />
-          <h1>TERYAQ</h1>
+          {/* <MedicationLiquidIcon />
+          <h1>TERYAQ</h1> */}
+          <img src={teryaqLogo} alt='Teryaq Logo' />
         </Link>
         <div className='menu-icon' onClick={handleShowNavbar}>
           <MenuIcon />

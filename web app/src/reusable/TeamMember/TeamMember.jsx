@@ -10,8 +10,7 @@ function TeamMember({ name, position, description, image }) {
 
       <div className='member__info'>
         <h2>{name} </h2>
-        <h4>{position}</h4>
-        <p>{description}</p>
+        <h3>{position}</h3>
       </div>
     </div>
   );
