@@ -1,6 +1,13 @@
 .help {
-  height: 100vh;
+  height: 110vh;
 
+  @media (width <= 768px) {
+    height: 150vh;
+  }
+
+  @media (width <= 500px) {
+    height: 165vh;
+  }
   .questions-container {
     div {
       background-color: #00adb5;

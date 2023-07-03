@@ -146,7 +146,7 @@ export default function About() {
       </Grid>
       <Grid item xs={12} md={6}>
         <TeamMember
-          name='Abdulrahman Mohammed Ismael'
+          name='Abdulrahman Ismael'
           image={abdulrahmanMohammed}
           position='Web Developer'
         />

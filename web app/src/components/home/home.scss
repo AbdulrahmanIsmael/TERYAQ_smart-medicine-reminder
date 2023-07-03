@@ -16,6 +16,10 @@
     align-items: center;
     padding: 20px 10px;
 
+    @media (width <= 768px) {
+      background-position: center center;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -27,6 +31,10 @@
     > div {
       span {
         font-size: 3.5rem;
+
+        @media (width <= 768px) {
+          font-size: 2.5rem;
+        }
       }
     }
 
@@ -36,6 +44,10 @@
       margin-top: 1em;
       line-height: 1.3em;
       color: #eee;
+
+      @media (width <= 768px) {
+        font-size: 1.2rem;
+      }
     }
 
     .main-section-btn {
@@ -79,6 +91,10 @@
 
       h2 {
         font-size: 2.4rem;
+
+        @media (width <= 768px) {
+          font-size: 1.7rem;
+        }
       }
 
       p {
@@ -87,6 +103,10 @@
         text-align: start;
         font-size: 1.6rem;
         line-height: 40px;
+
+        @media (width <= 768px) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -95,6 +115,7 @@
       height: 400px;
       border-radius: 100vmax;
       box-shadow: 0 0 15px 3px #393e46;
+      object-fit: cover;
     }
   }
 
@@ -119,12 +140,20 @@
 
       h2 {
         font-size: 2.4rem;
+
+        @media (width <= 768px) {
+          font-size: 1.7rem;
+        }
       }
 
       p {
         text-align: start;
         font-size: 1.6rem;
         line-height: 40px;
+
+        @media (width <= 768px) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -133,6 +162,7 @@
       height: 400px;
       border-radius: 100vmax;
       box-shadow: 0 0 3px 1px #eee;
+      object-fit: cover;
     }
   }
 
@@ -146,10 +176,18 @@
 
     h2 {
       font-size: 3rem;
+
+      @media (width <= 768px) {
+        font-size: 2rem;
+      }
     }
 
     p {
       font-size: 1.5rem;
+
+      @media (width <= 768px) {
+        font-size: 1.2rem;
+      }
     }
 
     .subscribe-email {
@@ -158,6 +196,11 @@
       gap: 0.3em;
       margin-top: 3em;
 
+      @media (width <= 768px) {
+        width: 100vw;
+        gap: 0;
+      }
+
       #email {
         transition: 0.1s ease;
         width: 80%;
@@ -165,6 +208,10 @@
         height: 1.7em;
         padding: 0.5em 0.2em;
         border: 1px solid #222831;
+
+        @media (width <= 768px) {
+          font-size: 1.5rem;
+        }
 
         &:focus {
           border-bottom: 2px solid #222831;
@@ -181,6 +228,14 @@
         border: 0;
         font-size: 1.7rem;
 
+        @media (width <= 768px) {
+          font-size: 1.1rem;
+        }
+
+        @media (width <= 500px) {
+          font-size: 0.7rem;
+        }
+
         &:is(:hover, :active) {
           background-color: #eee;
           color: #222831;
@@ -189,10 +244,6 @@
 
         &:focus {
           outline: 0;
-        }
-
-        @media (width <= 600px) {
-          font-size: 1rem;
         }
       }
     }
