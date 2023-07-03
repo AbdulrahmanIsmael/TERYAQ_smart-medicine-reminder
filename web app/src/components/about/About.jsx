@@ -6,6 +6,7 @@ import profileImage from '../../assets/profile image.png';
 import omarSobhy from '../../assets/omar sobhy.jpg';
 import ahmedHafez from '../../assets/ahmed hafez.jpg';
 import abdulrahmanMohammed from '../../assets/abdulrahman mohammed.jpeg';
+import mohamedAshraf from '../../assets/mohamed ashraf.png';
 
 export default function About() {
   return (
@@ -154,7 +155,7 @@ export default function About() {
       <Grid item xs={12} md={6}>
         <TeamMember
           name='Mohammed Ashraf'
-          image={profileImage}
+          image={mohamedAshraf}
           position='Web Developer'
         />
       </Grid>
