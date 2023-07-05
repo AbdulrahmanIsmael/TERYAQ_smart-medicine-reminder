@@ -1,4 +1,5 @@
 import preloaderGif from '../../assets/preloader.gif';
+
 function Preloader() {
   return (
     <div className='preloader'>
