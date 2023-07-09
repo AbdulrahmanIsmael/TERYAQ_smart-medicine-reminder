@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import './home.scss';
-import deviceImg1 from '../../assets/device1.jpg';
-import deviceImg2 from '../../assets/device3.jpg';
+import deviceImg1 from '../../assets/device1.png';
+import deviceImg2 from '../../assets/device3.png';
 
 function Home() {
   const typeRef = useRef(null);
